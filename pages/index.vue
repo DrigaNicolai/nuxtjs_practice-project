@@ -1,13 +1,21 @@
+<script>
+import { largeCardSections } from '@/assets/data.js'
+export default {
+  name: 'IndexPage',
+
+  data: () => ({
+    largeCardInfo: largeCardSections
+  })
+}
+</script>
+
 <template>
   <div>
     <HeroComponent />
-    <LargeCardDisplay />
+    <LargeCardDisplay
+      v-for="cardInfo in largeCardInfo"
+      :key="cardInfo.id"
+      :cards-section="cardInfo"
+    />
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'IndexPage'
-}
-</script>
