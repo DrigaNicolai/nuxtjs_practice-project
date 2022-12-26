@@ -1,8 +1,12 @@
 <template>
-  <Tutorial />
+  <div>
+    <HeroComponent />
+    <LargeCardDisplay />
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'IndexPage'
 }
