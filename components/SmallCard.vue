@@ -12,9 +12,9 @@ export default {
 </script>
 
 <template>
-  <div class="card-container">
+  <NuxtLink :to="`/products/${card.id}`" class="card-container">
     <img :src="require(`~/assets/images/${card.image || 'fe1.jpg'}`)" alt="small card" class="image">
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped>
