@@ -1,10 +1,11 @@
 <script>
-import { largeCardSections } from '@/assets/data.js'
+import { largeCardSections, smallCardSections } from '~/assets/data.js'
 export default {
   name: 'IndexPage',
 
   data: () => ({
-    largeCardInfo: largeCardSections
+    largeCardInfo: largeCardSections,
+    smallCardInfo: smallCardSections
   })
 }
 </script>
@@ -14,6 +15,11 @@ export default {
     <HeroComponent />
     <LargeCardDisplay
       v-for="cardInfo in largeCardInfo"
+      :key="cardInfo.id"
+      :cards-section="cardInfo"
+    />
+    <SmallCardDisplay
+      v-for="cardInfo in smallCardInfo"
       :key="cardInfo.id"
       :cards-section="cardInfo"
     />
