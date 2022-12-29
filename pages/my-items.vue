@@ -1,6 +1,8 @@
 <script>
 export default {
-  name: 'MyItems'
+  name: 'MyItems',
+
+  layout: "no-nav"
 }
 </script>
 

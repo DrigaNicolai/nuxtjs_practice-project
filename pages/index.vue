@@ -12,19 +12,16 @@ export default {
 
 <template>
   <div>
-    <NavBar />
-    <div>
-      <HeroComponent />
-      <LargeCardDisplay
-        v-for="cardInfo in largeCardInfo"
-        :key="cardInfo.id"
-        :cards-section="cardInfo"
-      />
-      <SmallCardDisplay
-        v-for="cardInfo in smallCardInfo"
-        :key="cardInfo.id"
-        :cards-section="cardInfo"
-      />
-    </div>
+    <HeroComponent />
+    <LargeCardDisplay
+      v-for="cardInfo in largeCardInfo"
+      :key="cardInfo.id"
+      :cards-section="cardInfo"
+    />
+    <SmallCardDisplay
+      v-for="cardInfo in smallCardInfo"
+      :key="cardInfo.id"
+      :cards-section="cardInfo"
+    />
   </div>
 </template>
