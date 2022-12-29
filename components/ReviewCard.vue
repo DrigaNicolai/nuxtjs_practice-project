@@ -1,0 +1,43 @@
+<script>
+export default {
+  name: "ReviewCard",
+
+  props: {
+    review: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
+
+<template>
+  <div class="review-card">
+    <div class="image-container">
+      <img :src="review.picture.large" alt="review">
+    </div>
+    <div class="text-container" >
+      <h6>{{review.login.username}}</h6>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quam magni beatae possimus debitis.</p>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.review-card {
+  margin-top: 1.5rem;
+  height: 4rem;
+  display: flex;
+}
+.text-container {
+  margin-left: 2rem
+}
+img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+}
+p {
+  color: grey
+}
+</style>

@@ -43,9 +43,10 @@ export default {
         {{ product.description }}
       </p>
     </div>
+    <Reviews />
   </div>
   <div v-else class="container padding">
-    Page not found for now
+    <PageNotFound />
   </div>
 </template>
 
